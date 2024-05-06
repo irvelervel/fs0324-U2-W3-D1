@@ -36,3 +36,41 @@ const person = {
 // in modo da mantenere correttamente il riferimento a "this"
 
 console.log(person.teach()) // 'Io mi chiamo Stefano e insegno JS'
+
+// LIMITAZIONI DI JS
+
+const cat1 = {
+  name: 'Fufy',
+  breed: 'Siamese',
+  meow: function () {
+    return 'MAO'
+  },
+}
+
+const cat2 = {
+  name: 'Pippo',
+  breed: 'European',
+  meow: function () {
+    return 'MAO'
+  },
+}
+
+// ...
+
+const cat43 = {
+  name: 'Tom',
+  bred: 'Certosino', // errore di battitura
+  meows: function () {
+    // errore di battitura
+    return 'MAO'
+  },
+}
+
+// sarebbe stato comodo avere una "fabbrica" di oggetti di tipo "cat", in questo modo non avremmo sicuramente
+// fatto questi stupidi errori di distrazione/battitura
+
+// anche in JS (come anche in altri linguaggi più "strutturati" e orientati agli oggetti) esiste la possibilità
+// di automatizzare la creazione di oggetti "in serie", tramite una "fabbrica" (o stampino, o progetto, etc.)
+// bisogna prendere dimestichezza con una "FUNZIONE COSTRUTTORE", ovvero delle funzioni che creeranno OGGETTI in serie!
+
+// proseguiamo su constructor.js
